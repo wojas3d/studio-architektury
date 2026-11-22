@@ -350,6 +350,11 @@ p { margin: 0 0 1em; max-width: 64ch; }
   .lb-nav { width: 42px; height: 42px; }
   .lb-thumbs img { width: 70px; height: 50px; }
 }
+/* telefony i tablety nie mają „najechania myszką”, więc zdjęcia są od razu w kolorze */
+@media (hover: none) {
+  .tile img, .office img, .award img, .strip .thumbs img { filter: none; }
+  .tile:hover img { transform: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-media .slide.zoom { transform: none; }
